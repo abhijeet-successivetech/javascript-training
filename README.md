@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # javascript-training
 
 Atomic Design:
@@ -40,3 +41,6 @@ the tweleve factors are:
 12) Admin process = management tasks should be run in same environment to ensure consistency.
 
 This is a result of long curated work that is being analyzed and transformed into this kind og guide helping a lot of developers around the globe.
+=======
+Hello There!!!!!
+>>>>>>> 48f3eabb8e81451e1ad6713b22dce386686387cf

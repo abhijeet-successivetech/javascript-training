@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # javascript-training
 
 Atomic Design:
@@ -7,8 +7,8 @@ Atomic design is a methodology for web and application development in which we e
     1.Atoms
     2.Molecules
     3.Organisms
-T   4.Templates
-P   5.Pages
+    4.Templates
+    5.Pages
 By following this methodology we can create a system which is maintainable as it should stand the test of time.
 
 The 12 factor app:
@@ -41,6 +41,4 @@ the tweleve factors are:
 12) Admin process = management tasks should be run in same environment to ensure consistency.
 
 This is a result of long curated work that is being analyzed and transformed into this kind og guide helping a lot of developers around the globe.
-=======
-Hello There!!!!!
->>>>>>> 48f3eabb8e81451e1ad6713b22dce386686387cf
+

@@ -38,3 +38,5 @@ the tweleve factors are:
 11) Logs = Treat logs as events. The logs should be handled permanently regardless of the situation
 
 12) Admin process = management tasks should be run in same environment to ensure consistency.
+
+This is a result of long curated work that is being analyzed and transformed into this kind og guide helping a lot of developers around the globe.

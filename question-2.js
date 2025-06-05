@@ -1,7 +1,7 @@
 // Write a function to take input(age, name, phone no.) from user and display it
 
 //ANS
-let detailEntry = () => {
+const detailEntry = () => {
   let details = prompt("Enter name age and number with spaces: ").split(" ");
   return `The details of the user is: 
     name ${details[0]}, 

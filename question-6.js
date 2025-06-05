@@ -2,7 +2,7 @@
 //  returns true if it's even and false if it's odd.
 
 //ANS
-let isEven = function (number) {
+const isEven = function (number) {
   if (number % 2 == 0) {
     return true;
   } else {

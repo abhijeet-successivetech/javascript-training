@@ -1,4 +1,4 @@
-//Write a program to print fibonaaci series
+//Write a program to print fibonacci series
 
 //ANS
 function fibonacci(n) {

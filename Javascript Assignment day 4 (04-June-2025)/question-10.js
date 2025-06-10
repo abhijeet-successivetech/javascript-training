@@ -3,7 +3,7 @@
 
 // Ans.
 
-function concatArrayOfArrays(arr) {
+const concatArrayOfArrays = (arr) => {
   let result = [];
   for (const element of arr) {
     if (Array.isArray(element)) {

@@ -1,7 +1,7 @@
 // Q8. Write a program to remove duplicate elements from an array
 
 // Ans.
-function removeDuplicates(arr) {
+const removeDuplicates = (arr) => {
   let count = {};
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
@@ -14,8 +14,16 @@ function removeDuplicates(arr) {
       newArray.push(parseFloat(element));
     }
   }
-  console.log(newArray);
+  return newArray;
 }
 
-const inputArray=[1, 74, 2, 3, 74, 4, 9, 9, 6, 6, 6]
-removeDuplicates(inputArray);
+const inp  = process.argv.slice(2);
+
+const arr = JSON.parse(inp);
+
+if(Array.isArray(arr) ){
+    console.log(removeDuplicates(arr));
+}
+else{
+    console.log("Error!!!");
+}

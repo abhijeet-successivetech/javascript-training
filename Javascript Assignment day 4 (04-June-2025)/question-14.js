@@ -1,17 +1,26 @@
+//Q4. Reverse the array 
 
+const reverseArray = (arr) => {
+  let start = 0;
+  let end = arr.length - 1;
+  while (start < end) {
+    let temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+    start++;
+    end--;
 
-function reverseArray(arr){
-    let start = 0;
-    let end  = arr.length-1;
-    while(start<end){
-        let temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        start++;
-        end--;
-
-    }
-    return arr;
+  }
+  return arr;
 }
 
-console.log(reverseArray([1,2,3,4,5,6]));
+const inp = process.argv.slice(2);
+
+const arr = JSON.parse(inp);
+
+if (Array.isArray(arr)) {
+  console.log(reverseArray(arr));
+}
+else {
+  console.log("Error!!!");
+}

@@ -2,7 +2,7 @@
 
 // Ans.
 
-function lastDuplicateIndex(arr) {
+const lastDuplicateIndex = (arr) => {
   let visited = [];
   let lastIndex = -1;
   for (let i = 0; i < arr.length; i++) {
@@ -12,7 +12,16 @@ function lastDuplicateIndex(arr) {
       visited.push(arr[i]);
     }
   }
-  console.log(lastIndex);
+  return lastIndex;
 }
 
-lastDuplicateIndex([1, 7, 2, 3, 4, 9, 6,12]);
+const inp  = process.argv.slice(2);
+
+const arr = JSON.parse(inp);
+
+if(Array.isArray(arr) ){
+    console.log(lastDuplicateIndex(arr));
+}
+else{
+    console.log("Error!!!");
+}

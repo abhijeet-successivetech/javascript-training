@@ -6,8 +6,8 @@ const removeID = (userList) => {
         delete key.id;
     }
 }
+console.log(obj);
 
-console.log(removeID);
 
 const inp = process.argv.slice(2);
 try {

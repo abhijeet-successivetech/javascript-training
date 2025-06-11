@@ -2,34 +2,34 @@
 
 
 // Shallow copy
-const obj={
-    name:"Abhi",
-    age: 21
+const obj = {
+  name: "Abhi",
+  age: 21
 }
 
-const obj2=obj;
+const obj2 = obj;
 
-obj2.name="xyz";
+obj2.name = "xyz";
 
 console.log(`Affects after shallow copy ${obj.name} and ${obj2.name}`);
 
 // Deep Copy
 
 const deepObj = {
-    name:"Raj",
-    age:22,
-    address: {
-        city:"Noida"
-    },
-    date:new Date(),
-    fn:()=>{
+  name: "Raj",
+  age: 22,
+  address: {
+    city: "Noida"
+  },
+  date: new Date(),
+  fn: () => {
 
-    }
+  }
 }
 console.log(deepObj);
 
-const deepClone = (objName)=>{
-    return JSON.parse(JSON.stringify(objName))
+const deepClone = (objName) => {
+  return JSON.parse(JSON.stringify(objName))
 }
 console.log((deepClone(deepObj)));
 

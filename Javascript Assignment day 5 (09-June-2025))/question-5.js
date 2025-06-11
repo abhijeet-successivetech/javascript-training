@@ -7,21 +7,21 @@ const obj = {
 Output: { 'a': 1, 'b.c': 2, 'b.d.0': 3, 'b.d.1': 4 }
 */
 
-function objectFlatter(obj){
+function objectFlatter(obj) {
   const ans = {};
 
-  for( const i in obj ){
-    
-    if(!obj.hasOwnProperty(i)) continue;
+  for (const i in obj) {
 
-    if( (typeof obj[i]) == "object" && obj[i] !== null){
+    if (!obj.hasOwnProperty(i)) continue;
+
+    if ((typeof obj[i]) == "object" && obj[i] !== null) {
 
       const toFlat = objectFlatter(obj[i]);
 
-      for(const j in toFlat){
-        if(!toFlat.hasOwnProperty(j)) continue;
+      for (const j in toFlat) {
+        if (!toFlat.hasOwnProperty(j)) continue;
 
-        ans[i + "." + j]  = toFlat[j];
+        ans[i + "." + j] = toFlat[j];
 
       }
     }
@@ -35,16 +35,16 @@ function objectFlatter(obj){
 }
 
 const inp = process.argv.slice(2);
-try{
-    const obj = JSON.parse(inp);
-    if( !(typeof obj) == 'object' || !Array.isArray(obj)){
-        console.log("Error");
-        
-    }
-    else{
-        objectFlatter(obj);
-    }
+try {
+  const obj = JSON.parse(inp);
+  if (!(typeof obj) == 'object' || !Array.isArray(obj)) {
+    console.log("Error");
 
-}catch(e){
-    console.log("Error!! wrong format");
+  }
+  else {
+    objectFlatter(obj);
+  }
+
+} catch (e) {
+  console.log("Error!! wrong format");
 }

@@ -5,24 +5,23 @@
 
 
 const sortObject = (obj) => {
-
-
-    console.log(obj.sort((a, b) => (a.age - b.age)))
+  
+  console.log(obj.sort((a, b) => (a.age - b.age)))
 }
 
 const inp = process.argv.slice(2);
 try {
-    const obj = JSON.parse(inp);
-    if (!(typeof obj) == 'object' || !Array.isArray(obj)) {
-        console.log("Error");
+  const obj = JSON.parse(inp);
+  if (!(typeof obj) == 'object' || !Array.isArray(obj)) {
+    console.log("Error");
 
-    }
-    else {
-        sortObject(obj);
-    }
+  }
+  else {
+    sortObject(obj);
+  }
 
 } catch (e) {
-    console.log("Error!! wrong format");
+  console.log("Error!! wrong format");
 }
 
 

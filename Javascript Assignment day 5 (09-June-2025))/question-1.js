@@ -6,6 +6,33 @@ const traverseObject = (obj) => {
   }
 };
 
+// Nested approach
+function traverseNested(obj) {
+  const ans = {};
+  for (const key in obj) {
+    if (typeof obj[key] == "object") {
+      const stackQ = traverse(obj[key]);
+      for (const value in stackQ) ans[key + "." + value] = stackQ[value];
+    } else {
+      ans[key] = obj[key];
+    }
+  }
+  return ans;
+}
+const testCase = {
+  a: 1,
+  b: { c: { d: 2 } },
+  e: {
+    f: {
+      g: {
+        h: 22,
+      },
+    },
+  },
+};
+
+console.log(traverseNested(testCase));
+
 const inp = process.argv.slice(2);
 try {
   const obj = JSON.parse(inp);

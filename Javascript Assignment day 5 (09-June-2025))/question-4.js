@@ -1,11 +1,10 @@
 //Q4.  Write a program deepClone that takes an object as input and returns a deep copy of that object. The function should handle nested objects and arrays.
 
-
 // Shallow copy
 const obj = {
   name: "Abhi",
-  age: 21
-}
+  age: 21,
+};
 
 const obj2 = obj;
 
@@ -19,17 +18,14 @@ const deepObj = {
   name: "Raj",
   age: 22,
   address: {
-    city: "Noida"
+    city: "Noida",
   },
   date: new Date(),
-  fn: () => {
-
-  }
-}
+  fn: () => {},
+};
 console.log(deepObj);
 
 const deepClone = (objName) => {
-  return JSON.parse(JSON.stringify(objName))
-}
-console.log((deepClone(deepObj)));
-
+  return JSON.parse(JSON.stringify(objName));
+};
+console.log(deepClone(deepObj));

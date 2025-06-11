@@ -11,40 +11,27 @@ function objectFlatter(obj) {
   const ans = {};
 
   for (const i in obj) {
-
-    if (!obj.hasOwnProperty(i)) continue;
-
-    if ((typeof obj[i]) == "object" && obj[i] !== null) {
-
+    if (typeof obj[i] == "object" && obj[i] !== null) {
       const toFlat = objectFlatter(obj[i]);
 
       for (const j in toFlat) {
-        if (!toFlat.hasOwnProperty(j)) continue;
-
         ans[i + "." + j] = toFlat[j];
-
       }
-    }
-    else {
+    } else {
       ans[i] = obj[i];
     }
-
   }
   return ans;
-
 }
 
 const inp = process.argv.slice(2);
 try {
   const obj = JSON.parse(inp);
-  if (!(typeof obj) == 'object' || !Array.isArray(obj)) {
+  if (!typeof obj == "object") {
     console.log("Error");
-
+  } else {
+    console.log(objectFlatter(obj));
   }
-  else {
-    objectFlatter(obj);
-  }
-
 } catch (e) {
   console.log("Error!! wrong format");
 }

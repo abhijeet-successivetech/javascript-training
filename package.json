@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "name": "javascript-assignment-day-9-(13-june-2025)",
+  "version": "1.0.0",
+  "description": "This readme is a part of the assignment of day 9 question 1.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

@@ -14,7 +14,6 @@ const promise = new Promise(function(resolve, reject) {
     }, 1000);
 });
 
-const data = 5;
 promise.then((data) =>{
   console.log(data);
 })
